@@ -23,23 +23,21 @@ This will be simplified when we release a new haxelib version.
 
 
 	# Install the Ufront libraries and dependencies
-	haxelib install ufront
+	haxelib git ufront-mvc https://github.com/hlizard/ufront-mvc
 	haxelib install ufront-client
-
-	# Clone and set up the development version of Ufront
-	git clone --recursive https://github.com/ufront/ufront.git
-	cd ufront
-	./setupDev
+	haxelib install ufront-tool
 
 	# Setup ufront shortcut
-	haxelib run ufront --setup
+	haxelib run ufront-tool --setup
 
 	# Build both "server.hxml" and "client.hxml"
-	cd submodules/hello
 	ufront build            # Or shorter, `ufront b`
+	haxelib install hxnodejs
+	haxelib install express
 
 	# To test neko, run a temporary server:
 	ufront server           # Or shorter, `ufront s`
+	然后可以通过http://[主机名]:2987进行访问
 
 	# Run a temporary server (PHP)
 	cd www
@@ -60,7 +58,7 @@ This has been tested and works server side with:
 * Client-side:
 	* JS (Browser)
 
-All testing is done with Haxe 3.2.
+All testing is done with Haxe 3.4.2.
 
 Please report bugs here: <https://github.com/ufront/hello/issues>
 
