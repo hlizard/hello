@@ -34,6 +34,7 @@ This will be simplified when we release a new haxelib version.
 	ufront build            # Or shorter, `ufront b`
 	haxelib install hxnodejs
 	haxelib install express
+	haxelib dev ufront-mvc E:\MyCode\ufront\ufront-mvc
 
 	# To test neko, run a temporary server:
 	ufront server           # Or shorter, `ufront s`

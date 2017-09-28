@@ -10,7 +10,7 @@
 
 --next
 
--php www/
+-php www
 --php-lib php
 
 --next
@@ -19,3 +19,10 @@
 -lib express
 --macro allowPackage("sys")
 -js www/server.js
+
+--next
+
+-cp www/src 
+-cs www/bin 
+-D keep-old-output
+-D erase-generics
